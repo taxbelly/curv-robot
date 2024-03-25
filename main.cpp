@@ -8,7 +8,7 @@
     stream.read(haystack_, haystack_len);
     current = haystack_;
     end = current + haystack_len;
-  }
+  }//yes
 
   void SetHayStack(const char* buffer, size_t buff_len)
   {
