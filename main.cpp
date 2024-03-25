@@ -19,3 +19,18 @@
     current = haystack_;
     end = current + buff_len;
   }
+ if (!i)                   //last byte matches if i == 0
+      {
+        char* j = current - needle_len_less1;
+        while (i < needle_len_less1 && needle_[i] == *(j + i)) ++i;
+        if (i == needle_len_less1)
+        {
+          ++current;
+          last_found = j;
+          return true;
+        }
+        else
+          current += jump_;
+      }
+      else
+        current += i;
