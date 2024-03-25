@@ -3,7 +3,7 @@
     ClearHaystack();
     stream.seekg(0, ios::end);
     haystack_len = static_cast<size_t>(stream.tellg());
-    stream.seekg(0, ios::beg);
+    stream.seekg(0, ios::beg);//goosd
     haystack_ = new char[haystack_len];
     stream.read(haystack_, haystack_len);
     current = haystack_;
